@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HcJFvF193CCCipT3GbW06R4+CwRscM7B3Coy/BTXsHU8O3N35XSkFX5uY+C4z0FJDWWc7V/oABz4K2Rvo0TZJw==",
+  "success": true,
+  "projectFilePath": "D:\\Estudos\\WebApi-MySql\\Desenvolvimento de Web APIs .NET Core com MySQL\\Projetos\\MinhaWebApi\\MinhaWebApi\\AplicacaoCliente\\AplicacaoCliente.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pedro\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

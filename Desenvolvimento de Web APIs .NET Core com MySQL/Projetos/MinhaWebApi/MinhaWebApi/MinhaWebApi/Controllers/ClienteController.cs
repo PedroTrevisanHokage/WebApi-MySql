@@ -43,6 +43,8 @@ namespace MinhaWebApi.Controllers
         {
             try
             {
+                AutenticacaoServico.Autenticar();
+
                 return new ReturnAllServices()
                 {
                     Result = true,
@@ -85,6 +87,8 @@ namespace MinhaWebApi.Controllers
 
             try
             {
+                AutenticacaoServico.Autenticar();
+
                 service.RegistrarCliente(informacoes);
                 return new ReturnAllServices()
                 {
@@ -104,50 +108,61 @@ namespace MinhaWebApi.Controllers
 
         [HttpGet]
         [Route("RetornarTodosClientesCadastrados")]
-        public IActionResult RetornarTodosClientesCadastrados()
+        public ReturnAllServices RetornarTodosClientesCadastrados()
         {
             try
             {
-                var service = new ClienteService();
+                AutenticacaoServico.Autenticar();
 
-                return Ok(service.RetornarTodosClientesCadastrados());
+                var service = new ClienteService();
                 
-                //return new ReturnAllServices()
-                //{
-                //    Result = true,
-                //    Message = JsonSerializer.Serialize(service.RetornarTodosClientesCadastrados())
-                //};
+                return new ReturnAllServices()
+                {
+                    Result = true,
+                    Message = JsonSerializer.Serialize(service.RetornarTodosClientesCadastrados())
+                };
 
             }
             catch (Exception ex)
             {
-                return BadRequest($"Falha ao retornar dados: {ex.Message}");
-                //return new ReturnAllServices()
-                //{
-                //    Result = false,
-                //    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
-                //};
+                return new ReturnAllServices()
+                {
+                    Result = false,
+                    Message = $"Erro ao tentar retornar todos clientes. exMessage: {ex.Message}"
+                };
             }
         }
 
         [HttpGet]
         [Route("RetornarClientePorId/{id}")]
-        public IActionResult RetornarClientePorId(int id)
+        public ReturnAllServices RetornarClientePorId(int id)
         {
             try
             {
+                AutenticacaoServico.Autenticar();
+
                 var service = new ClienteService();
 
                 var cliente = service.RetornarClientePorId(id);
 
                 if (cliente != null)
                 {
-                    return Ok(cliente);
+                    //return Ok(cliente);
                     //return Content(HttpStatusCode.OK, new ResponseDto("99", mensagemRetorno));
+                    return new ReturnAllServices()
+                    {
+                        Result = true,
+                        Message = JsonSerializer.Serialize(service.RetornarTodosClientesCadastrados())
+                    };
                 }
                 else
                 {
-                    return Ok("Não há cliente com esse ID");
+                    //return Ok("Não há cliente com esse ID");
+                    return new ReturnAllServices()
+                    {
+                        Result = false,
+                        Message = "Não há cliente com esse ID"
+                    };
                 }
 
                 //return new ReturnAllServices()
@@ -159,14 +174,14 @@ namespace MinhaWebApi.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Falha ao retornar dados: {ex.Message}");
-                //return new ReturnAllServices()
-                //{
-                //    Result = false,
-                //    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
-                //};
-
+                //return BadRequest($"Falha ao retornar dados: {ex.Message}");
                 //return Content(HttpStatusCode.BadRequest, new ResponseDto("99", mensagemRetorno));
+                return new ReturnAllServices()
+                {
+                    Result = false,
+                    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
+                };
+
             }
         }
 
@@ -175,6 +190,8 @@ namespace MinhaWebApi.Controllers
         {
             try
             {
+                AutenticacaoServico.Autenticar();
+
                 var service = new ClienteService();                
 
                 var cliente = service.RetornarClientePorId(informacoes.id);
