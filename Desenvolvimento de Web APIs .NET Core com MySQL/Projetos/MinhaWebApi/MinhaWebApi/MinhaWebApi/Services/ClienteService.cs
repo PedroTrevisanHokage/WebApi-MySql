@@ -12,12 +12,14 @@ namespace MinhaWebApi.Services
 
         public void RegistrarCliente(ClienteModel infos)
         {
+            var dataNascimento = Convert.ToDateTime(infos.data_nascimento);
+            
             string qry = "INSERT INTO cliente (nome, data_cadastro,cpf_cnpj, data_nascimento, tipo, telefone, email, cep, logradouro, numero, bairro, complemento, cidade, uf)" +
                 "VALUES(" +
                 $" '{infos.nome}'" +
                 $",'{DateTime.Now.ToString("yyyy/MM/dd")}'" +
                 $",'{infos.cpf_cnpj}'" +
-                $",'{infos.data_nascimento.ToString("yyyy/MM/dd")}'"+
+                $",'{dataNascimento.ToString("yyyy/MM/dd")}'"+
                 $",'{infos.tipo}'" +
                 $",'{infos.telefone}'" +
                 $",'{infos.email}'" +

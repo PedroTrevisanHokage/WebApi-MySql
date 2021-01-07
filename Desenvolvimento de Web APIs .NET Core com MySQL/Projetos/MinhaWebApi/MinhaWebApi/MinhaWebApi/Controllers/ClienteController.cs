@@ -41,36 +41,23 @@ namespace MinhaWebApi.Controllers
         //}
 
         [HttpGet]
-        public IEnumerable<string> Get2()
+        public ReturnAllServices Get()
         {
             try
             {
-                //var dal = new DAL();
-                //string qry = "INSERT INTO cliente (nome, data_cadastro,cpf_cnpj, data_nascimento, tipo, telefone, email, cep, logradouro, numero, bairro, complemento, cidade, uf)" +
-                //    "VALUES(" +
-                //    " 'Teste1'" +
-                //    $",'{DateTime.Now.ToString("yyyy/MM/dd")}'" +
-                //    ",'367.883.528.79'" +
-                //    ",'1988/04/01'" +
-                //    ",'F'" +
-                //    ",'9999999999'" +
-                //    ",'pedtrevisan@gmail.com'" +
-                //    ",'14092-460'" +
-                //    ",'Rua Teste'" +
-                //    ",'545'" +
-                //    ",'Bairro Teste'" +
-                //    ",'Complemento TESTE'" +
-                //    ",'Cidade Teste'" +
-                //    ",'TT'" +
-                //    ")";
-
-                //dal.ExecutarComandoSql(qry);
-
-                return new string[] { "OK" };
+                return new ReturnAllServices()
+                {
+                    Result = true,
+                    Message = "OK"
+                };
             }
             catch (Exception ex)
             {
-                return new string[] { $"{ex.Message}" };
+                return new ReturnAllServices()
+                {
+                    Result = false,
+                    Message = $"Falha ao retornar dados iniciais. exMessage: {ex.Message}"
+                };
             }
         }
 
