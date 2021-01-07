@@ -10,6 +10,7 @@ using MinhaWebApi.Services;
 using MinhaWebApi.Util;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Http;
 
 namespace MinhaWebApi.Controllers
 {
@@ -22,25 +23,20 @@ namespace MinhaWebApi.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<ClienteController> _logger;
+        //private readonly ILogger<ClienteController> _logger;
 
-        public ClienteController(ILogger<ClienteController> logger)
-        {
-            _logger = logger;
-        }
-
-        //[HttpGet]
-        //public IEnumerable<WeatherForecast> Get()
+        //public ClienteController(ILogger<ClienteController> logger)
         //{
-        //    var rng = new Random();
-        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        //    {
-        //        Date = DateTime.Now.AddDays(index),
-        //        TemperatureC = rng.Next(-20, 55),
-        //        Summary = Summaries[rng.Next(Summaries.Length)]
-        //    })
-        //    .ToArray();
+        //    _logger = logger;
+
         //}
+
+        Autenticacao AutenticacaoServico;
+
+        public ClienteController(IHttpContextAccessor context)
+        {
+            AutenticacaoServico = new Autenticacao(context);
+        }
 
         [HttpGet]
         public ReturnAllServices Get()
@@ -218,8 +214,11 @@ namespace MinhaWebApi.Controllers
         [Route("excluirCliente/{id}")]
         public ReturnAllServices ExcluirClientePorId(int id)
         {
+            
             try
             {
+                AutenticacaoServico.Autenticar();
+                
                 var service = new ClienteService();
 
                 var cliente = service.RetornarClientePorId(id);
