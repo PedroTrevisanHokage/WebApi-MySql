@@ -147,12 +147,12 @@ namespace MinhaWebApi.Controllers
                 if (cliente != null)
                 {
                     return Ok(cliente);
+                    //return Content(HttpStatusCode.OK, new ResponseDto("99", mensagemRetorno));
                 }
                 else
                 {
                     return Ok("Não há cliente com esse ID");
                 }
-
 
                 //return new ReturnAllServices()
                 //{
@@ -169,7 +169,89 @@ namespace MinhaWebApi.Controllers
                 //    Result = false,
                 //    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
                 //};
+
+                //return Content(HttpStatusCode.BadRequest, new ResponseDto("99", mensagemRetorno));
             }
         }
+
+        [HttpPut]
+        public ReturnAllServices AtualizarCliente([FromBody] ClienteModel informacoes)
+        {
+            try
+            {
+                var service = new ClienteService();                
+
+                var cliente = service.RetornarClientePorId(informacoes.id);
+
+                if (cliente != null)
+                {
+                    service.AtualizarCliente(informacoes);
+
+                    return new ReturnAllServices()
+                    {
+                        Result = true,
+                        Message = $"Informações atualizadas com sucesso"
+                    };
+                }
+                else
+                {
+                    return new ReturnAllServices()
+                    {
+                        Result = false,
+                        Message = $"Não há cliente com esse ID"
+                    };
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                return new ReturnAllServices()
+                {
+                    Result = false,
+                    Message = $"Erro ao tentar atualizar o cliente. exMessage: {ex.Message}"
+                };
+            }
+        }
+
+        [HttpDelete]
+        [Route("excluirCliente/{id}")]
+        public ReturnAllServices ExcluirClientePorId(int id)
+        {
+            try
+            {
+                var service = new ClienteService();
+
+                var cliente = service.RetornarClientePorId(id);
+
+                if (cliente != null)
+                {
+                    service.ExcluirClientePorId(id);
+
+                    return new ReturnAllServices()
+                    {
+                        Result = true,
+                        Message = $"Cliente excluido com sucesso"
+                    };
+                }
+                else
+                {
+                    return new ReturnAllServices()
+                    {
+                        Result = false,
+                        Message = $"Não há cliente com esse ID"
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ReturnAllServices()
+                {
+                    Result = false,
+                    Message = $"Erro ao tentar excluir o cliente. exMessage: {ex.Message}"
+                };
+            }
+        }
+
     }
 }

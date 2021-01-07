@@ -129,5 +129,53 @@ namespace MinhaWebApi.Services
             }
         }
 
+        public void AtualizarCliente(ClienteModel infos)
+        {
+            try
+            {
+                var dataNascimento = Convert.ToDateTime(infos.data_nascimento);
+
+                string qry = "UPDATE CLIENTE " +
+                    " SET " +
+                    $" nome = '{infos.nome}'" +
+                    $",data_cadastro = '{DateTime.Now.ToString("yyyy/MM/dd")}'" +
+                    $",cpf_cnpj = '{infos.cpf_cnpj}'" +
+                    $",data_nascimento = '{dataNascimento.ToString("yyyy/MM/dd")}'" +
+                    $",tipo = '{infos.tipo}'" +
+                    $",telefone = '{infos.telefone}'" +
+                    $",email = '{infos.email}'" +
+                    $",cep = '{infos.cep}'" +
+                    $",logradouro = '{infos.logradouro}'" +
+                    $",numero = '{infos.numero}'" +
+                    $",bairro = '{infos.bairro}'" +
+                    $",complemento = '{infos.complemento}'" +
+                    $",cidade = '{infos.cidade}'" +
+                    $",uf = '{infos.uf}'" +
+                    $" WHERE id = {infos.id}";
+
+                var dal = new DAL();
+                dal.ExecutarComandoSql(qry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ExcluirClientePorId(int id)
+        {
+            try
+            {
+                string qry = $"DELETE FROM CLIENTE WHERE id = {id}";
+
+                var dal = new DAL();
+                dal.ExecutarComandoSql(qry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
