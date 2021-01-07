@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mtVeSEUtXAPuqiidCtL7qj7JtWFoFVq7wMz2kPVWqIclcc4MmdZGo6AJ23IaX1HlEpr1bOweshzdskq+R3W0Pw==",
+  "dgSpecHash": "sNFOZFrVf+RjXRPBRrOypuhJ5DpXxgBeC7tz6G7vBnN6kILhoFPKITDrezMqdJSbCFKTPMkRziUcRze2fe8VSQ==",
   "success": true,
-  "projectFilePath": "D:\\Estudos\\_Desenvolvimento de Web APIs .NET Core com MySQL\\Projetos\\MinhaWebApi\\MinhaWebApi\\MinhaWebApi\\MinhaWebApi.csproj",
+  "projectFilePath": "D:\\Estudos\\WebApi-MySql\\Desenvolvimento de Web APIs .NET Core com MySQL\\Projetos\\MinhaWebApi\\MinhaWebApi\\MinhaWebApi\\MinhaWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pedro\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Pedro\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
