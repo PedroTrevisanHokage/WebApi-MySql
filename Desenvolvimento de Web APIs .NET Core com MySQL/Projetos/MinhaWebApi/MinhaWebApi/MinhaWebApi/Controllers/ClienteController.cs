@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using MinhaWebApi.Models;
 using MinhaWebApi.Services;
 using MinhaWebApi.Util;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace MinhaWebApi.Controllers
 {
@@ -101,6 +103,72 @@ namespace MinhaWebApi.Controllers
                     Result = false,
                     Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
                 };
+            }
+        }
+
+        [HttpGet]
+        [Route("RetornarTodosClientesCadastrados")]
+        public IActionResult RetornarTodosClientesCadastrados()
+        {
+            try
+            {
+                var service = new ClienteService();
+
+                return Ok(service.RetornarTodosClientesCadastrados());
+                
+                //return new ReturnAllServices()
+                //{
+                //    Result = true,
+                //    Message = JsonSerializer.Serialize(service.RetornarTodosClientesCadastrados())
+                //};
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Falha ao retornar dados: {ex.Message}");
+                //return new ReturnAllServices()
+                //{
+                //    Result = false,
+                //    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
+                //};
+            }
+        }
+
+        [HttpGet]
+        [Route("RetornarClientePorId/{id}")]
+        public IActionResult RetornarClientePorId(int id)
+        {
+            try
+            {
+                var service = new ClienteService();
+
+                var cliente = service.RetornarClientePorId(id);
+
+                if (cliente != null)
+                {
+                    return Ok(cliente);
+                }
+                else
+                {
+                    return Ok("Não há cliente com esse ID");
+                }
+
+
+                //return new ReturnAllServices()
+                //{
+                //    Result = true,
+                //    Message = JsonSerializer.Serialize(service.RetornarTodosClientesCadastrados())
+                //};
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Falha ao retornar dados: {ex.Message}");
+                //return new ReturnAllServices()
+                //{
+                //    Result = false,
+                //    Message = $"Erro ao tentar cadastrar o cliente. exMessage: {ex.Message}"
+                //};
             }
         }
     }
