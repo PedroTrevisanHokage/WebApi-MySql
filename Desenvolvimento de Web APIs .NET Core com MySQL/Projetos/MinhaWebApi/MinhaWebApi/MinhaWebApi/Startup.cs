@@ -29,6 +29,7 @@ namespace MinhaWebApi
         {
             services.AddControllers();
             services.AddHttpContextAccessor();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +40,8 @@ namespace MinhaWebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
 
@@ -49,6 +51,8 @@ namespace MinhaWebApi
             {
                 endpoints.MapControllers();
             });
+
+            
         }
     }
 }
