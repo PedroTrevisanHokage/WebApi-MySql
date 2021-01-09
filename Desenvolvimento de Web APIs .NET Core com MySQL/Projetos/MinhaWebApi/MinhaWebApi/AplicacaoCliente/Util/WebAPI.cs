@@ -17,7 +17,10 @@ namespace AplicacaoCliente.Util
         {
             try
             {
-                var request = (HttpWebRequest)WebRequest.Create($"{URI}/{method}/{parametro}");
+                //var request = (HttpWebRequest)WebRequest.Create($"{URI}/{method}/{parametro}");
+                var request = (HttpWebRequest)WebRequest.Create($"https://localhost:44367/api/cliente/RetornarTodosClientesCadastrados/");
+                
+                request.Method = "GET";
                 request.Headers.Add("Token", TOKEN);
                 var response = (HttpWebResponse)request.GetResponse();
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
