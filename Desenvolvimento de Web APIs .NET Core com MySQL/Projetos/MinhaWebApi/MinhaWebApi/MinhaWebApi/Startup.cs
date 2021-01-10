@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.Swagger;
 
 namespace MinhaWebApi
 {
@@ -31,6 +32,8 @@ namespace MinhaWebApi
             services.AddHttpContextAccessor();
             services.AddCors();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +55,10 @@ namespace MinhaWebApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs"));
 
             
         }

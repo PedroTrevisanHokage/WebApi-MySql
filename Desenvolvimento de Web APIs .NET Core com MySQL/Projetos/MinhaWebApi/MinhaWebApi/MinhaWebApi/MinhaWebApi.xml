@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MinhaWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:MinhaWebApi.Util.DAL.ExecutarComandoSql(System.String)">
+            <summary>
+            Executa um omando do tip INSERT, UPDATE E DELETE
+            </summary>
+            <param name="qry"></param>
+        </member>
+    </members>
+</doc>

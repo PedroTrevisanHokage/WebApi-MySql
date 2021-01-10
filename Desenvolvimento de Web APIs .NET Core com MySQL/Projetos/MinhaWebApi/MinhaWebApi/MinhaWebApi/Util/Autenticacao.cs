@@ -28,7 +28,7 @@ namespace MinhaWebApi.Util
                     throw new Exception(FALHA_AUTENTICACAO);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new Exception(FALHA_AUTENTICACAO);
             }

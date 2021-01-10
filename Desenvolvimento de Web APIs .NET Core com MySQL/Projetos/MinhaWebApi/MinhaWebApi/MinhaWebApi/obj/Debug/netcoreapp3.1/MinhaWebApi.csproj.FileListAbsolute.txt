@@ -61,8 +61,6 @@ D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.csprojAssemblyReference.cache
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.AssemblyInfoInputs.cache
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.AssemblyInfo.cs
-D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.csproj.CoreCompileInputs.cache
-D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.RazorTargetAssemblyInfo.cache
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.csproj.CopyComplete
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\staticwebassets\MinhaWebApi.StaticWebAssets.Manifest.cache
@@ -70,3 +68,14 @@ D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.dll
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.pdb
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.genruntimeconfig.cache
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\MinhaWebApi.xml
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.csproj.CoreCompileInputs.cache
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Projetos\MinhaWebApi\MinhaWebApi\MinhaWebApi\obj\Debug\netcoreapp3.1\MinhaWebApi.MvcApplicationPartsAssemblyInfo.cache
