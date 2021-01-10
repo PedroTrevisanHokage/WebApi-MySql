@@ -64,7 +64,7 @@ namespace AplicacaoClienteSeparada.Services
         {
             try
             {
-                WebAPI.RequestPut("AtualizarCliente", JsonConvert.SerializeObject(dados));
+                WebAPI.RequestPut(String.Empty, JsonConvert.SerializeObject(dados));
             }
             catch (Exception  ex)
             {
