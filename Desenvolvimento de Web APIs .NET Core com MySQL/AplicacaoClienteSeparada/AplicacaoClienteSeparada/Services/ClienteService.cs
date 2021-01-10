@@ -41,5 +41,35 @@ namespace AplicacaoClienteSeparada.Services
                 throw ex;
             }
         }
+
+        public ClienteModel ListarClientePorId(int? id)
+        {
+            try
+            {
+                var responseJson = WebAPI.RequestGet("RetornarClientePorId", $"{id}");
+
+                var response = JsonConvert.DeserializeObject<ReturnAllServices>(responseJson);
+
+                var clientes = JsonConvert.DeserializeObject<List<ClienteModel>>(response.Message);
+
+                return clientes.FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void EditarCliente(ClienteModel dados)
+        {
+            try
+            {
+                WebAPI.RequestPut("AtualizarCliente", JsonConvert.SerializeObject(dados));
+            }
+            catch (Exception  ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

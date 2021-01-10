@@ -37,8 +37,14 @@ namespace AplicacaoClienteSeparada.Controllers
         }
 
         [HttpGet]
-        public IActionResult Registrar()
+        public IActionResult Registrar(int? id)
         {
+            var service = new ClienteService();
+            if (id != null)
+            {
+                ViewBag.ClientePorId = service.ListarClientePorId(id);
+            }
+            
             return View();
         }
         
@@ -46,7 +52,14 @@ namespace AplicacaoClienteSeparada.Controllers
         public IActionResult Registrar(ClienteModel cliente)
         {
             var service = new ClienteService();
-            service.Inserircliente(cliente);
+            if (cliente.id <= 0)
+            {
+                service.Inserircliente(cliente);
+            }
+            else
+            {
+                service.EditarCliente(cliente);
+            }
             
             return View();
         }

@@ -61,5 +61,35 @@ namespace AplicacaoClienteSeparada.Util
             }
             
         }
+
+        public static string RequestPut(string method, string jsonData)
+        {
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create($"{URI}/{method}");
+                var postData = jsonData;
+                var data = Encoding.ASCII.GetBytes(postData);
+
+                request.Method = "PUT";
+                request.Headers.Add("Token", TOKEN);
+                request.ContentType = "application/json";
+                request.ContentLength = data.Length;
+
+                using (var stream = request.GetRequestStream())
+                {
+                    stream.Write(data, 0, data.Length);
+                }
+
+                var response = (HttpWebResponse)request.GetResponse();
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+                return responseString;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 <table class="table table-bordered">
     <tr>
+        <td>Ações</td>
         <td>Id</td>
         <td>Nome</td>
     </tr>
@@ -9,6 +10,7 @@
         @foreach (var cliente in (List<ClienteModel>)ViewBag.ListarTodosClientes)
         {
             <tr>
+                <td style="width:50px"><button class="btn btn-primary" onclick="RegistrarCliente(@cliente.id)">Editar</button></td>
                 <td>@cliente.id</td>
                 <td>@cliente.nome</td>
             </tr>
@@ -19,8 +21,13 @@
 <button class="btn btn-primary" onclick="RegistrarCliente()">Registrar Cliente</button>
 
 <script>
-    function RegistrarCliente() {
-        window.location.href = window.location.origin + "/Home/Registrar"
+    function RegistrarCliente(id) {
+        if (id == null) {
+            window.location.href = window.location.origin + "/Home/Registrar";
+        }
+        else {
+            window.location.href = window.location.origin + "/Home/Registrar/" + id;
+        }
     }
 
 </script>
