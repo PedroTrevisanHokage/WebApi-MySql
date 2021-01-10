@@ -1,6 +1,6 @@
 ﻿@model ClienteModel
 
-<table class="table-bordered">
+<table class="table table-bordered">
     <tr>
         <td>Id</td>
         <td>Nome</td>
@@ -12,7 +12,15 @@
                 <td>@cliente.id</td>
                 <td>@cliente.nome</td>
             </tr>
-
         }
     </tbody>
 </table>
+
+<button class="btn btn-primary" onclick="RegistrarCliente()">Registrar Cliente</button>
+
+<script>
+    function RegistrarCliente() {
+        window.location.href = window.location.origin + "/Home/Registrar"
+    }
+
+</script>

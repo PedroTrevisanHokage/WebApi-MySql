@@ -36,6 +36,12 @@ namespace AplicacaoClienteSeparada.Controllers
 
         }
 
+        
+        public IActionResult Registrar()
+        {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();

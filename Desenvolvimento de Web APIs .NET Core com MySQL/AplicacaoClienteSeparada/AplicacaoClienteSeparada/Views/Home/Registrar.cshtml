@@ -1,0 +1,79 @@
+﻿@model ClienteModel
+
+<h2>Registrar Cliente</h2>
+
+<form method="post" asp-controller="Home">
+
+
+    <div class="row">
+        <div class="col-lg-3">
+            <label>Nome</label>
+            <input asp-for="nome" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>CPF/CNPJ</label>
+            <input asp-for="cpf_cnpj" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Data de Nascimento</label>
+            <input asp-for="data_nascimento" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Tipo Pessoa</label>
+            <input asp-for="tipo" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Telefone</label>
+            <input asp-for="telefone" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>E-Mail</label>
+            <input asp-for="email" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>CEP</label>
+            <input asp-for="cep" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Logradouro</label>
+            <input asp-for="logradouro" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Número</label>
+            <input asp-for="numero" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Bairro</label>
+            <input asp-for="bairro" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Complemento</label>
+            <input asp-for="complemento" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>Cidade</label>
+            <input asp-for="cidade" class="form-control" />
+        </div>
+
+        <div class="col-lg-3">
+            <label>UF</label>
+            <input asp-for="uf" class="form-control" />
+        </div>
+    </div>
+
+    <br />
+    <button class="btn btn-primary" type="submit">Salvar Informações</button>
+</form>
+
+
