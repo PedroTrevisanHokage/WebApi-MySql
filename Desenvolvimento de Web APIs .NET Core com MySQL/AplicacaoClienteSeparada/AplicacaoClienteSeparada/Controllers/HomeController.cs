@@ -36,9 +36,18 @@ namespace AplicacaoClienteSeparada.Controllers
 
         }
 
-        
+        [HttpGet]
         public IActionResult Registrar()
         {
+            return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Registrar(ClienteModel cliente)
+        {
+            var service = new ClienteService();
+            service.Inserircliente(cliente);
+            
             return View();
         }
         

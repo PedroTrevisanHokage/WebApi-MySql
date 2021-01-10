@@ -29,5 +29,17 @@ namespace AplicacaoClienteSeparada.Services
                 throw ex;
             }
         }
+
+        public void Inserircliente(ClienteModel dados)
+        {
+            try
+            {
+                WebAPI.RequestPost("registrarCliente", JsonConvert.SerializeObject(dados));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
