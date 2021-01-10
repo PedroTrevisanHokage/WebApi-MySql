@@ -11,6 +11,7 @@
         {
             <tr>
                 <td style="width:50px"><button class="btn btn-primary" onclick="RegistrarCliente(@cliente.id)">Editar</button></td>
+                <td style="width:50px"><button class="btn btn-danger" onclick="ExcluirCliente(@cliente.id)">Excluir</button></td>
                 <td>@cliente.id</td>
                 <td>@cliente.nome</td>
             </tr>
@@ -28,6 +29,10 @@
         else {
             window.location.href = window.location.origin + "/Home/Registrar/" + id;
         }
+    }
+
+    function ExcluirCliente(id) {
+        window.location.href = window.location.origin + "/Home/Excluir/" + id;
     }
 
 </script>

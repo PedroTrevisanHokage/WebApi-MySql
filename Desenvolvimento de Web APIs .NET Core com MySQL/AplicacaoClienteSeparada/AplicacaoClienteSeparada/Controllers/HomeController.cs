@@ -63,9 +63,22 @@ namespace AplicacaoClienteSeparada.Controllers
             
             return View();
         }
+
+        public IActionResult Excluir(int id)
+        {
+            ViewData["ClienteID"] = id;
+            return View();
+        }
+
+        public IActionResult ExcluirCliente(int id)
+        {
+            var service = new ClienteService();
+            service.ExcluirCliente(id);
+            return View();
+        }
         
         public IActionResult Privacy()
-        {
+        {            
             return View();
         }
 

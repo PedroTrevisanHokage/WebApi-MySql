@@ -91,5 +91,24 @@ namespace AplicacaoClienteSeparada.Util
             }
 
         }
+
+        public static string RequestDelete(string method, string parametro)
+        {
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create($"{URI}/{method}/{parametro}");
+
+                request.Method = "DELETE";
+                request.Headers.Add("Token", TOKEN);
+                var response = (HttpWebResponse)request.GetResponse();
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+                return responseString;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

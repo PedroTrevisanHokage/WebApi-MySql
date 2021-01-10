@@ -75,3 +75,5 @@ D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\Aplicaca
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\AplicacaoClienteSeparada\AplicacaoClienteSeparada\obj\Debug\netcoreapp3.1\AplicacaoClienteSeparada.pdb
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\AplicacaoClienteSeparada\AplicacaoClienteSeparada\obj\Debug\netcoreapp3.1\AplicacaoClienteSeparada.genruntimeconfig.cache
 D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\AplicacaoClienteSeparada\AplicacaoClienteSeparada\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registrar.cshtml.g.cs
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\AplicacaoClienteSeparada\AplicacaoClienteSeparada\obj\Debug\netcoreapp3.1\Razor\Views\Home\Excluir.cshtml.g.cs
+D:\Estudos\WebApi-MySql\Desenvolvimento de Web APIs .NET Core com MySQL\AplicacaoClienteSeparada\AplicacaoClienteSeparada\obj\Debug\netcoreapp3.1\Razor\Views\Home\ExcluirCliente.cshtml.g.cs

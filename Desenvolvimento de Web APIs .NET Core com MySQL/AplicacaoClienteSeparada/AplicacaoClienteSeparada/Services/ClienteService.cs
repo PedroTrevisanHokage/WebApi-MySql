@@ -71,5 +71,17 @@ namespace AplicacaoClienteSeparada.Services
                 throw ex;
             }
         }
+
+        public void ExcluirCliente(int id)
+        {
+            try
+            {
+                WebAPI.RequestDelete("excluirCliente", id.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
